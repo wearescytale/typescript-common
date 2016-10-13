@@ -1,4 +1,4 @@
-# Typescript common componets repository
+# Typescript common components repository
 
 ## Services
 
