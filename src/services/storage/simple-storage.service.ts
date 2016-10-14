@@ -1,18 +1,19 @@
 import { Injectable } from "@angular/core";
 
 import { StorageModel } from "../../models";
+import { StorageInterface } from "./storage.interface.ts";
 
 /**
  * @ngdoc service
- * @name Storage
+ * @name SimpleStorageService
  * @description
  * Provides a key-value store using localStorage to persist data.
  */
 @Injectable()
-export class StorageService {
+export class SimpleStorageService implements StorageInterface {
     /**
      * @ngdoc method
-     * @name Storage#get
+     * @name SimpleStorageService#get
      * @description
      * Retrieve a value from the storage by key,
      * optionally supplying a placeholder if missing.
@@ -36,7 +37,7 @@ export class StorageService {
 
     /**
      * @ngdoc method
-     * @name Storage#set
+     * @name SimpleStorageService#set
      * @description
      * Store a value storage, optionally supplying an expiry time.
      *
@@ -61,7 +62,7 @@ export class StorageService {
 
     /**
      * @ngdoc method
-     * @name Storage#has
+     * @name SimpleStorageService#has
      * @description
      * Check if a value is in the storage
      *
@@ -79,7 +80,7 @@ export class StorageService {
 
     /**
      * @ngdoc method
-     * @name Storage#delete
+     * @name SimpleStorageService#delete
      * @description
      * Deletes a value from the storage
      *
@@ -91,7 +92,7 @@ export class StorageService {
 
     /**
      * @ngdoc method
-     * @name Storage#clear
+     * @name SimpleStorageService#clear
      * @description
      * Clears all keys set in the storage
      */
